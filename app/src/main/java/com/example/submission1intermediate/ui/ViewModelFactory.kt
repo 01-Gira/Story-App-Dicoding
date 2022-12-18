@@ -43,7 +43,7 @@ class ViewModelFactory(private val pref: UserPreference, private val context: Co
             }
             modelClass.isAssignableFrom(DarkModeViewModel::class.java) -> {
                 @Suppress("UNCHECKED_CAST")
-                DarkModeViewModel(pref) as T
+                DarkModeViewModel(Injection.provideRepository(context)) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

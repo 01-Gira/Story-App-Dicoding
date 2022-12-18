@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.submission1intermediate.R
 import com.example.submission1intermediate.data.local.preferences.UserPreference
@@ -36,10 +35,16 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private val darkModelViewModel: DarkModeViewModel by viewModels {
+        ViewModelFactory(UserPreference.getInstance(dataStore), this)
+    }
+
     private val authViewModel: AuthViewModel by viewModels {
         ViewModelFactory(UserPreference.getInstance(dataStore), this)
     }
     private lateinit var token: String
+
     private val mainViewModel: MainViewModel by viewModels{
         ViewModelFactory(UserPreference.getInstance(dataStore), this)
     }
@@ -124,11 +129,8 @@ class MainActivity : AppCompatActivity() {
 
         val switch = menu?.findItem(R.id.switch_theme)?.actionView?.findViewById<SwitchMaterial>(R.id.switch2)
 
-        val darkModeViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore), this)).get(
-            DarkModeViewModel::class.java
-        )
 
-        darkModeViewModel.getThemeSettings().observe(this) {isDarkModeActive: Boolean ->
+        darkModelViewModel.getThemeMode().observe(this) {isDarkModeActive: Boolean ->
             if (isDarkModeActive) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 switch?.isChecked = true
@@ -139,7 +141,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         switch?.setOnCheckedChangeListener{ _: CompoundButton, isChecked: Boolean ->
-            darkModeViewModel.saveThemeSetting(isChecked)
+            darkModelViewModel.saveThemeMode(isChecked)
         }
 
         return super.onCreateOptionsMenu(menu)

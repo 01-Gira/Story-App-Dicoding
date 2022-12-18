@@ -34,14 +34,14 @@ Class-StoryRepositoryTest
 Class-AddStoryViewModelTest
 
 1. when story() is called Should Not Null and Return Success
--  memastikan fungsi upload di AddStoryViewModel bekerja sebagaimana mestinya
+-  memastikan fungsi upload() pada repository terpanggil / dijalankan dengan baik
 -  memastikan response yang diupload tidak null
 -  memastikan response yang diupload dengan yang diharapkan
 
 Class-LoginViewModelTest
 
 1. when getResponseLogin() is called Should Not Null and Return Success
--  memastikan fungsi login bekerja sebagaimana mestinya
+-  memastikan fungsi getResponseLogin() pada repository terpanggil / dijalankan dengan baik
 -  memastikan data yang didapat tidak null
 -  memastikan data yang didapat sesuai dengan data dugaan
 
@@ -49,7 +49,7 @@ Class-LoginViewModelTest
 Class-RegisterViewModel
 
 1. when getResponseRegister() is called Should Not Null and Return Success
--  memastikan fungsi getResponseRegister bekerja sebagaimana mestinya
+-  memastikan fungsi getResponseRegister() pada repository terpanggil / dijalankan dengan baik
 -  memastikan data yang didapat tidak null
 -  memastikan data yang didapat sesuai dengan data dugaan
 
@@ -61,13 +61,13 @@ Class-AuthViewModel
 -  memastikan data yang didapat sesuai dengan data dugaan
 
 2. verify LoginState function is working
--  memastikan fungsi saveLoginState bekerja sebagaimana mestinya
+-  memastikan fungsi saveLoginState() pada repository terpanggil / dijalankan dengan baik
 
-3. saveToken and name successfully
--  memastikan fungsi menyimpan token dan nama berhasil
+3. verify saveToken function is working
+-  memastikan saveToken() pada repository terpanggil / dijalankan dengan baik
 
-4. logout successfully
--  memastikan fungsi logut berhasil
+4. verify logout function is working
+-  memastikan fungsi logut() terpanggil / dijalankan dengan baik
 
 5. when getToken return the right data and not null
 -  memastikan data yang didapat tidak null
@@ -90,5 +90,13 @@ Class-MainViewModelTest
 -  memastikan data yang didapat tidak null
 -  memastikan data yang didapat sesuai dengan data dugaan
 
+Class-DarkModeViewModelTest
+
+1. when getThemeMode return the right data and not null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+2. when saveThemeMode function is working
+-  memastikan fungsi saveThemeMode() pada repository terpanggil / dijalankan dengan baik
 
 

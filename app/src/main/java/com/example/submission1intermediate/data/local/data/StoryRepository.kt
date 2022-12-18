@@ -123,6 +123,12 @@ class StoryRepository(
         userPreference.logout()
     }
 
+    fun getThemeMode(): LiveData<Boolean> = userPreference.getThemeSetting().asLiveData()
+
+    suspend fun saveThemeMode(isDarkModeActive: Boolean) {
+        userPreference.saveThemeSetting(isDarkModeActive)
+    }
+
     companion object {
         private const val TAG = "StoryRepository"
     }

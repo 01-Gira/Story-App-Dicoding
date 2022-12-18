@@ -60,14 +60,13 @@ class AuthViewModelTest {
     }
 
     @Test
-    fun `saveToken and name successfully`(): Unit = runTest {
-
+    fun `verify saveToken function is working`(): Unit = runTest {
         authViewModel.saveToken("123", "gira")
         verify(storyRepository).saveToken("123","gira")
     }
 
     @Test
-    fun `logout successfully`(): Unit = runTest {
+    fun `verify logout function is working`(): Unit = runTest {
         authViewModel.logout()
         verify(storyRepository).logout()
     }
