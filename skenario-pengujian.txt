@@ -1,0 +1,94 @@
+Skenario Pengujian
+Intermediate Android Dicoding 2nd Submission
+Gira Muhammad Nur Icharisma
+a314x0828
+
+===================================================================================
+UNIT TESTING
+===================================================================================
+
+Class-StoryRepositoryTest
+
+1. when get PagingStory should not null and Return Success
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengam data dugaan
+-  memastikan jumlah data yang didapat sesuai dengan data dugaan
+
+2. when getMapStories() is called Should Not Null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+3. when getResponselogin() is called Should  Not Null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+4. when getResponseRegister() is called Should  Not Null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengam data dugaan
+
+5. when postStory() is called Should Not Null
+-  memastikan data yang diupload tidak null
+-  memastikan data yang diupload dengan yang diharapkan
+
+
+Class-AddStoryViewModelTest
+
+1. when story() is called Should Not Null and Return Success
+-  memastikan fungsi upload di AddStoryViewModel bekerja sebagaimana mestinya
+-  memastikan response yang diupload tidak null
+-  memastikan response yang diupload dengan yang diharapkan
+
+Class-LoginViewModelTest
+
+1. when getResponseLogin() is called Should Not Null and Return Success
+-  memastikan fungsi login bekerja sebagaimana mestinya
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+
+Class-RegisterViewModel
+
+1. when getResponseRegister() is called Should Not Null and Return Success
+-  memastikan fungsi getResponseRegister bekerja sebagaimana mestinya
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+
+Class-AuthViewModel
+
+1. when isLogin return the right data and not null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+2. verify LoginState function is working
+-  memastikan fungsi saveLoginState bekerja sebagaimana mestinya
+
+3. saveToken and name successfully
+-  memastikan fungsi menyimpan token dan nama berhasil
+
+4. logout successfully
+-  memastikan fungsi logut berhasil
+
+5. when getToken return the right data and not null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+
+
+Class-MainViewModelTest
+
+1. verify getStory is working and should not return null
+-  memastikan fungsi getStory bekerja sebagaimana mestinya
+-  memastikan data yang didapat tidak null
+-  memastikan jumlah data sesuai dengan yang diharapkan
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+
+ Class-MapsViewModel
+
+1. when getStories() should return the right data and not null
+-  memastikan data yang didapat tidak null
+-  memastikan data yang didapat sesuai dengan data dugaan
+
+
+

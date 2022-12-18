@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Submission 1 Intermediate</string>
+    <string name="success_register">Berhasil membuat akun!</string>
+    <string name="sign_out">Keluar</string>
+    <string name="log_in">Masuk</string>
+    <string name="fail_register">Email sudah terpakai</string>
+    <string name="timeout">Koneksi Error!, silahkan coba kembali nanti</string>
+    <string name="fail_data">Gagal!, Tidak ada data</string>
+    <string name="yes">Iya</string>
+    <string name="no">Tidak</string>
+    <string name="confirm_signout">Apa anda yakin ingin keluar?</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password2">Konfirmasi Password</string>
+    <string name="enter_name">Masukan nama</string>
+    <string name="enter_email">Masukan email</string>
+    <string name="enter_password">Masukan password</string>
+    <string name="confirm_password">Password tidak sama</string>
+    <string name="length_password">Password harus lebih dari 6 karakter</string>
+    <string name="invalid_email">Gunakan format email yang benar</string>
+    <string name="success">Berhasil</string>
+    <string name="success_login">Anda telah login</string>
+    <string name="fail_login">Password salah</string>
+    <string name="fail">Gagal</string>
+    <string name="back">Kembali</string>
+    <string name="new_story">Tambah story</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="error_camera">Error!, gagal membuka kamera</string>
+    <string name="fail_capture">Gagal! mengambil gambar</string>
+    <string name="no_permission">Tidak mendapatkan ijin</string>
+    <string name="empty_picture">Silahkan pilih gambar terlebih dahulu!</string>
+    <string name="empty_desc">Deskripsi tidak boleh kosong!</string>
+    <string name="success_capture">Berhasil!</string>
+    <string name="success_upload">Berhasil upload story</string>
+    <string name="fail_internet">Gagal!, Silahkan cek jaringan internet</string>
+    <string name="sign_up">Buat Akun</string>
+    <string name="select_language">Pilih bahasa</string>
+    <string name="welcome">Selamat datang</string>
+    <string name="retry">Muat ulang</string>
+    <string name="maps">Maps</string>
+    <string name="message">"Pesan : "</string>
+    <string name="location_name_unknown">Lokasi tidak diketahui</string>
+    <string name="no_location">"Tidak ada lokasi "</string>
+</resources>

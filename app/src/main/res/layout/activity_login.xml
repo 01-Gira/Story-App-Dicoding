@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.auth.LoginActivity">
+
+        <ImageView
+            android:id="@+id/iv_login"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:src="@drawable/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            tools:alpha="1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0"
+            android:text="@string/welcome"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_login"
+            tools:alpha="01" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0"
+            android:text="@string/email"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+            tools:alpha="01" />
+
+        <com.example.submission1intermediate.ui.customview.CustomViewEditText
+            android:id="@+id/ed_login_email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            android:background="@drawable/custom_edittext"
+            android:elevation="5dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email"
+            tools:alpha="01"
+            tools:ignore="Autofill"
+            tools:text="asdasd" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:text="@string/password"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_email"
+            app:layout_constraintTop_toBottomOf="@+id/ed_login_email"
+            tools:alpha="1" />
+
+        <com.example.submission1intermediate.ui.customview.CvEditTextPassword
+            android:id="@+id/ed_login_password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            android:background="@drawable/custom_edittext"
+            android:elevation="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password"
+            tools:alpha="1"
+            tools:ignore="Autofill" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@drawable/custom_button"
+            android:text="@string/log_in"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/ed_login_password"
+            app:layout_constraintTop_toBottomOf="@+id/ed_login_password"
+            tools:alpha="1"
+            tools:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_regist"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@drawable/custom_button_register"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/ed_login_password"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/ed_login_password"
+            tools:alpha="1"
+            tools:textAllCaps="false" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_login"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="260dp"
+        android:theme="@style/progressBarStyle" />
+</RelativeLayout>
+
+
+
+
