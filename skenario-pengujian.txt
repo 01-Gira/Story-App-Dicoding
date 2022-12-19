@@ -67,7 +67,7 @@ Class-AuthViewModel
 -  memastikan saveToken() pada repository terpanggil / dijalankan dengan baik
 
 4. verify logout function is working
--  memastikan fungsi logut() terpanggil / dijalankan dengan baik
+-  memastikan fungsi logut() pada repository terpanggil / dijalankan dengan baik
 
 5. when getToken return the right data and not null
 -  memastikan data yang didapat tidak null
@@ -78,7 +78,7 @@ Class-AuthViewModel
 Class-MainViewModelTest
 
 1. verify getStory is working and should not return null
--  memastikan fungsi getStory bekerja sebagaimana mestinya
+-  memastikan fungsi getStory() pada repository terpanggil / dijalankan dengan baik
 -  memastikan data yang didapat tidak null
 -  memastikan jumlah data sesuai dengan yang diharapkan
 -  memastikan data yang didapat sesuai dengan data dugaan

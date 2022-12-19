@@ -42,7 +42,7 @@ class DarkModeViewModelTest {
         val expectedValue = MutableLiveData<Boolean>()
         expectedValue.value = darkMode
 
-        `when`(darkModeViewModel.getThemeMode()).thenReturn(expectedValue)
+        `when`(storyRepository.getThemeMode()).thenReturn(expectedValue)
 
         val actualDarkModeState= darkModeViewModel.getThemeMode().getOrWaitValue()
 

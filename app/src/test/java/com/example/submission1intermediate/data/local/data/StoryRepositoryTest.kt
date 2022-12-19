@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListUpdateCallback
 import com.example.submission1intermediate.CoroutineRule
 import com.example.submission1intermediate.DataDummy
 import com.example.submission1intermediate.MainDispatcherRule
+import com.example.submission1intermediate.data.local.database.StoryDatabase
 import com.example.submission1intermediate.data.local.preferences.UserPreference
 import com.example.submission1intermediate.data.remote.response.ListStoryItem
 import com.example.submission1intermediate.data.remote.retrofit.ApiService
@@ -48,11 +49,6 @@ class StoryRepositoryTest {
     @get:Rule
     val mainDispatcherRules = MainDispatcherRule()
 
-
-    @Mock
-    private lateinit var userPreference: UserPreference
-
-
     @Mock
     private lateinit var storyRepository: StoryRepository
     private lateinit var apiService: ApiService
@@ -67,6 +63,7 @@ class StoryRepositoryTest {
     fun setUp() {
         apiService = FakeApiService()
         storyRepository = Mockito.mock(StoryRepository::class.java)
+
     }
 
 
@@ -120,6 +117,7 @@ class StoryRepositoryTest {
         assertNotNull(actualResponse)
         assertEquals(expectedResponse, actualResponse)
     }
+
     
     @Test
     fun `when postStory() is called Should Not Null`() = runTest {
@@ -137,9 +135,6 @@ class StoryRepositoryTest {
         assertNotNull(actualResponse)
         assertEquals(expectedResponse, actualResponse)
     }
-
-
-
 
     class StoryPagingSource : PagingSource<Int, LiveData<List<ListStoryItem>>>() {
         companion object {
